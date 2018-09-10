@@ -1,0 +1,12 @@
+{
+    starDataList {
+      id
+      CommonName
+  }
+    starData(id: Int!) {
+      id
+      CommonName
+      DistanceInParsecs
+      AbsoluteMagnitude
+    }
+}

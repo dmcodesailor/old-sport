@@ -1,0 +1,8 @@
+# {
+#     starData(id: Int!) {
+#       id
+#       CommonName
+#       DistanceInParsecs
+#       AbsoluteMagnitude
+#     }
+# }

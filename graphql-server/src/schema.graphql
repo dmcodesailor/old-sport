@@ -1,0 +1,39 @@
+type Query {
+    # Fetches all the stars in the catalog (>46,000).
+    starDataList: [StarData]
+    # Fetches a single star by ID (zero-based).
+    starData(id: Int!): StarData
+}
+
+type StarData {
+    id: Int!
+    CommonName: String
+    GlieseCatalogId: String
+    ProperName: String
+    SpectralType: String
+    DistanceInParsecs: Float
+    x: Float
+    y: Float
+    z: Float
+    AbsoluteMagnitude: Float
+}
+
+input NewStarData {
+    HipparcosCatalogId: Int
+    CommonName: String
+    BayerFlamsteedDesignation: String
+    GlieseCatalogId: String
+    HenryDraperCatalogId: String
+    HarvardRevisedCatalogId: String
+    ProperName: String
+    SpectralType: String
+    DistanceInParsecs: Float
+    x: Float
+    y: Float
+    z: Float
+    AbsoluteMagnitude: Float
+}
+
+type Mutation {
+    createStarData(newStarData: NewStarData!): StarData!
+}
